@@ -1,0 +1,80 @@
+.container {
+  height:886px;
+  p {
+    font-size:18px;
+  }
+background-color:$light-gray;
+}
+
+h1 {
+  font-family: 'Teko', Helvetica, Roboto, Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//footer stylesheet
+
+footer {
+  background-color:$primary-color;
+  color:$white;
+  .grid-container {
+      max-width: 85rem;
+      padding: 150px 0;
+  }
+  p {
+    font-size:50px;
+    font-weight:200;
+    line-height:1.2;
+  }
+  h4 {
+    font-family: 'Teko', Helvetica, Roboto, Arial, sans-serif;
+    font-size:1.4rem;
+    text-transform:uppercase;
+  }
+  h5 {
+    font-size:.8rem;
+    opacity:0.7;
+    a {
+      font-size:.8rem;
+      opacity:1;
+      text-decoration:underline;
+    }
+  }
+  ul {
+    list-style:none;
+    margin-left:0;
+    line-height:1;
+    margin-top:1rem;
+  }
+  a {
+    font-size:1.4rem;
+    line-height:$input-line-height;
+    opacity:0.7;
+    color:$white;
+    &:hover, &:active {
+      opacity:1;
+      color:$white;
+    }
+
+  }
+  .holder {
+    position:relative;
+    .bott {
+      position:absolute;
+      bottom:0;
+    }
+  }
+
+}

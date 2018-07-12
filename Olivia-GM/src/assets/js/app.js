@@ -10,3 +10,9 @@ import Foundation from 'foundation-sites';
 
 
 $(document).foundation();
+
+//open/close menu
+
+$('[data-toggle-menu]').on("click", function(){
+  $("#overlay-nav-menu").toggleClass("is-open");
+});
