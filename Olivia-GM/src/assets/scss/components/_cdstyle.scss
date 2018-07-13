@@ -1,3 +1,5 @@
+$teko-font-family:'Teko', Helvetica, Roboto, Arial, sans-serif;
+
 .container {
   height:886px;
   p {
@@ -5,25 +7,6 @@
   }
 background-color:$white;
 }
-
-.slide {
-  height:886px;
-  h2 {
-    font-size:2.75rem;
-  }
-  .grid-container {
-    padding-top:30vh;
-  }
-  h3 {
-    font-family: 'Teko', Helvetica, Roboto, Arial, sans-serif;
-    text-transform:uppercase;
-  }
-}
-
-h1 {
-  font-family: 'Teko', Helvetica, Roboto, Arial, sans-serif;
-}
-
 
 h2 {
   font-weight:200;
@@ -36,6 +19,10 @@ h2 {
   background-color:$secondary-color;
 .grid-container {
   padding-top:30vh;
+  h1 {
+    font-family: $teko-font-family;
+    font-size:2rem;
+  }
 }
 }
 
@@ -60,6 +47,42 @@ audio {
 .sticky-container{
   display:none;
 
+}
+
+.teche {
+  position:fixed;
+  font-family:$teko-font-family;
+  text-transform: uppercase;
+  color:$dark-gray;
+  opacity:0.7;
+  bottom:2rem;
+  right:3rem;
+  i{
+margin-left:10px;
+  }
+}
+
+
+.herodeep{
+  padding-top:30vh;
+}
+
+
+
+.safetyquote{
+  background-color:#FF6066;
+  text-align:center;
+  h2 {
+    font-family:$teko-font-family;
+    color:#FF6066;
+    background-color:$white;
+    font-size:3rem;
+    display:inline;
+    line-height: 5rem;
+  }
+  .grid-container {
+    padding-top:30vh;
+  }
 }
 
 /*
