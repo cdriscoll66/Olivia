@@ -1,13 +1,13 @@
 .container {
-  height:100vh;//886px;
+  height:886px;
   p {
     font-size:18px;
   }
-background-color:$light-gray;
+background-color:$white;
 }
 
 .slide {
-  height:100vh;
+  height:886px;
   h2 {
     font-size:2.75rem;
   }
@@ -45,6 +45,21 @@ h2 {
   .grid-container{
     padding-top:30vh;
   }
+}
+
+audio {
+  display:none;
+}
+
+.linespace {
+  height:20vh;
+  border-left: 1px solid $primary-color;
+  margin: 1rem 0 1rem 1.4rem;
+}
+
+.sticky-container{
+  display:none;
+
 }
 
 /*
