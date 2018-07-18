@@ -8,9 +8,11 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 
+
 import Scrollify from 'jquery-scrollify';
 
 import 'waypoints/lib/noframework.waypoints.min';
+import './lib/waypointslider';
 
 
 $(document).foundation();
@@ -31,13 +33,8 @@ $(function() {
   });
 });
 
-//audio set up
+//Display menu
 
-var waypoint = new Waypoint({
-  element: document.getElementById('waypoint'),
-  handler: function(direction) {
-  }
-})
 
 
 $(document).ready( function() {

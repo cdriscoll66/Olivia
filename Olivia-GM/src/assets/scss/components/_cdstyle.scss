@@ -46,7 +46,6 @@ audio {
 
 .sticky-container{
   display:none;
-
 }
 
 .teche {
@@ -69,13 +68,12 @@ margin-left:10px;
 
 
 
-.safetyquote{
-  background-color:#FF6066;
+.quote{
   text-align:center;
   h2 {
     font-family:$teko-font-family;
-    color:#FF6066;
     background-color:$white;
+    text-transform:uppercase;
     font-size:3rem;
     display:inline;
     line-height: 5rem;
@@ -83,6 +81,65 @@ margin-left:10px;
   .grid-container {
     padding-top:30vh;
   }
+}
+
+
+
+.safety{
+    background-color:#FF6066;
+    h2{
+      color:#FF6066;
+    }
+}
+
+
+.journey{
+    background-color:#46ECFB;
+    h2{
+      color:#46ECFB;
+    }
+}
+
+.family{
+    background-color:#7971EB;
+    h2{
+      color:#7971EB;
+    }
+}
+
+//methodology
+
+.method {
+  text-align:center;
+  .slide .grid-container{
+    padding-top:5vh;
+    position:relative;
+  }
+  h2 {
+    font-family:$teko-font-family;
+    text-transform:uppercase;
+    font-size:1.4rem;
+  }
+  p {
+    padding-top:40vh;
+  }
+  .slide {
+    position:relative;
+  }
+  .bgnum {
+    z-index: 0;
+    font-family: $teko-font-family;
+    font-size: 49rem;
+    font-weight:300;
+    color: #002440;
+    position: absolute;
+    width:100%;
+    display:block;
+    margin:0 auto;
+}
+.grid-container{
+  z-index: 2;
+}
 }
 
 /*
