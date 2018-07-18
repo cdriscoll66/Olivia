@@ -17,6 +17,10 @@ import './lib/waypointslider';
 
 $(document).foundation();
 
+
+
+
+
 //open/close menu
 
 $('[data-toggle-menu]').on("click", function(){
@@ -29,7 +33,8 @@ $(function() {
   $.scrollify({
     section : ".slide",
      interstitialSection : ".intersection",
-     standardScrollElements: ".upperquad",
+     //standardScrollElements: ".upperquad",
+     scrollSpeed: 2400,
   });
 });
 
@@ -60,7 +65,7 @@ $(window).scroll(function() {
 
 //play audio
 
-var continuousElements = document.getElementsByClassName('slide')
+var continuousElements = document.getElementsByClassName('sound')
 for (var i = 0; i < continuousElements.length; i++) {
   new Waypoint({
     element: continuousElements[i],
@@ -74,9 +79,6 @@ for (var i = 0; i < continuousElements.length; i++) {
 
 //Audio mute
 
-
-$("video").prop('muted', true);
-
   $("#mute-audio").click( function (){
     if( $("audio").prop('muted') ) {
           $("audio").prop('muted', false);
@@ -85,4 +87,22 @@ $("video").prop('muted', true);
       $("audio").prop('muted', true);
       $(this).removeClass('fi-volume').addClass('fi-volume-strike');
     }
+  });
+
+  //page always loads from first scrollTop
+//set this for the line height of the side bar
+
+function lnhgt(){
+  var lnhite = Math.round((($( window ).height())/3)-50);
+$('.linespace').css('height', lnhite);
+
+}
+
+
+  $(document).ready(function(){
+    $.scrollify.move(0);
+    lnhgt();
+    $('audio').trigger('pause');
+      $("audio").prop('muted', true);
+      setTimeout(function(){ $("audio").prop('muted', false)}, 9000);
   });

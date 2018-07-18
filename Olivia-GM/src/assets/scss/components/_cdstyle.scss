@@ -2,12 +2,16 @@ $teko-font-family:'Teko', Helvetica, Roboto, Arial, sans-serif;
 
 .container {
   height:886px;
+  position:relative;
   p {
     font-size:18px;
   }
 background-color:$white;
 }
 
+.slide {
+  position:relative;
+}
 h2 {
   font-weight:200;
   line-height:1.2;
@@ -17,8 +21,10 @@ h2 {
   text-align:center;
   color: $white;
   background-color:$secondary-color;
+  background-image: url('../img/HOME_BG_TEXTURE.png');
+  background-repeat:no-repeat;
+  background-size: cover;
 .grid-container {
-  padding-top:30vh;
   h1 {
     font-family: $teko-font-family;
     font-size:2rem;
@@ -39,8 +45,8 @@ audio {
 }
 
 .linespace {
-  height:20vh;
-  border-left: 1px solid $primary-color;
+  //height:20vh;
+  border-left: 1px solid $dark-gray;
   margin: 1rem 0 1rem 1.4rem;
 }
 
@@ -140,6 +146,34 @@ margin-left:10px;
 .grid-container{
   z-index: 2;
 }
+}
+
+.olivia {
+  background-image: url('../img/1_HERO.png');
+  background-repeat:no-repeat;
+  background-position:80% 20%;
+}
+
+.safeimg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+}
+
+
+//name at top of page
+
+li.tag {
+    transform: rotate(270deg);
+    transform-origin: top left;
+    margin-top: 90px;
+    margin-left: 8px;
+    margin-bottom: -20px;
+    font-family: $teko-font-family;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: $dark-gray;
 }
 
 /*

@@ -1,0 +1,45 @@
+.circle {
+  background-color:transparent;
+  border:1px solid $dark-gray;
+  height:10px;
+  width:10px;
+  border-radius:50%;
+}
+.is-active {
+  div {
+    background-color:$dark-gray;
+  }
+}
+
+i#mute-audio{
+  color:$dark-gray;
+}
+.dots {
+    position:absolute;
+}
+
+.dots1 {
+  top: 50vh;
+  left:50vh;
+}
+
+.dots2 {
+  left: 5rem;
+  top: 100px;
+}
+
+.dots6 {
+  right: 15rem;
+  top: 100px;
+}
+
+.dots4 {
+  left: 30rem;
+  top:100px;
+}
+
+.starting {
+  background-image: url('../img/starting-bg.png');
+  background-repeat:no-repeat;
+  background-position: 80% 20%;
+}
