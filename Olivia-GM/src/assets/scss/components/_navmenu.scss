@@ -10,8 +10,8 @@ $overlay-nav-menu-bg: $primary-color;
   font-size: $overlay-nav-menu-toggle-size;
   z-index: 5000;
   color: $overlay-nav-menu-toggle-color;
-  top: -0.5rem;
-  right: 1.5rem;
+  top: 3rem;
+  right: 5rem;
   transition: all 0.4s ease-in-out;
 
   &:hover {
@@ -39,14 +39,14 @@ $overlay-nav-menu-bg: $primary-color;
   text-align: left;
   transform: translateX(-100%) rotateX(40deg);
   transition: all 400ms cubic-bezier(1.000, -0.400, 0.440, 0.985);
-  padding:10rem;
+  //padding:10rem;
 
   li {
     font-size: 2.2rem;
   }
 
   a {
-    display: block;
+    display: inline-block;
     color: $overlay-nav-menu-link-color;
     font-weight: 200;
     height: $overlay-nav-menu-link-height;
@@ -55,8 +55,25 @@ $overlay-nav-menu-bg: $primary-color;
     text-decoration: none;
     opacity:0.7;
 
+
+    &:before {
+      content: "";
+    display: inline-block;
+    height: 1px;
+    background: $white;
+    width: 0px;
+    margin: 10px;
+    opacity:0;
+    -webkit-transition: opacity 0.5s, width 0.5s;
+    transition: opacity 0.5s, width 0.5s;
+    }
+
     &:hover {
       opacity:1;
+      &:before {
+        opacity:1;
+        width:100px;
+      }
     }
   }
 
@@ -69,7 +86,7 @@ $overlay-nav-menu-bg: $primary-color;
   &.is-open ~ .overlay-nav-menu-toggle {
     display: inline-block;
     transition: all 0.4s ease-in-out;
-    transform: rotate(135deg);
+    //transform: rotate(135deg);
     color: lighten($overlay-nav-menu-toggle-color, 100%);
   }
 }

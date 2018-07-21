@@ -3,7 +3,7 @@
 {{> hero}}
 
 <div class="slide intro">
-  <img class="dots dots2" src="assets/img/squares_group_4B.png" alt="dots new" />
+  <img class="dots dots2" src="assets/img/squares_group_4B.png" alt="dots-dots" />
 
   <div class="grid-container">
   <div class="grid-x grid-margin-x">
@@ -18,27 +18,10 @@ will power GM through coming waves of technological change in and around the con
 </div>
 </div>
 </div>
-<div class="lowerquad">
+{{>index-dotnav}}
 
 
-  <nav class="sticky-container" data-sticky-container>
-  <div class="sticky dotstyle dotstyle-fillup" data-sticky data-anchor="exampleId" data-sticky-on="large">
-    <ul class="vertical menu" data-magellan data-animation-easing="swing" data-animation-duration="1000">
-      <li><div class="linespace"></div></li>
-      <li><a href="#first"><div class="circle"></div></a></li>
-      <li><a href="#second"><div class="circle"></div></a></li>
-      <li><a href="#third"><div class="circle"></div></a></li>
-      <li><a href="#fourth"><div class="circle"></div></a></li>
-      <li><a href="#fifth"><div class="circle"></div></a></li>
-      <li><a href="#sixth"><div class="circle"></div></a></li>
-
-      <li><div class="linespace"></div></li>
-      <li><a><i class="fi-volume" id="mute-audio"></i></a></li>
-
-    </ul>
-  </div>
-</nav>
-<div class="slide olivia " id="first" data-magellan-target="first">
+<div class="slide olivia" id="first" data-magellan-target="first">
     <div class="grid-container">
     <div class="grid-x grid-margin-x">
       <div class="large-6 cell">
@@ -47,7 +30,7 @@ will power GM through coming waves of technological change in and around the con
   </div>
   </div>
   </div>
-  <div id="1st" class="sound"></div>
+  <div id="1st" class="sound" data-src="1stindexsound"></div>
   </div>
 <div class="slide starting" id="second" data-magellan-target="second">
   <div class="grid-container">
@@ -64,7 +47,7 @@ away. It’s all booked.” “Thanks.”</p>
 </div>
 </div>
 </div>
-<div id="2nd" class="sound"></div>
+<div id="2nd" class="sound" data-src="2ndindexsound"></div>
 </div>
 <div class="slide " id="third" data-magellan-target="third">
   <div class="grid-container">
@@ -79,7 +62,7 @@ Accept and add ‘Looking forward to the meeting.”</p>
 <a class="button">Learn about safety</a>
 </div>
 </div>
-<div id="3rd" class="sound"></div>
+<div id="3rd" class="sound" data-src="3rdindexsound"></div>
 </div>
 </div><div class="slide " id="fourth" data-magellan-target="fourth">
   <img class="dots dots4" src="assets/img/squares_group_3A.png" alt="dots" />
@@ -97,7 +80,7 @@ for meditation?” “Yes, that’d be great.”</p>
 </div>
 </div>
 </div>
-<div id="4th" class="sound"></div>
+<div id="4th" class="sound" data-src="4thindexsound"></div>
 </div><div class="slide " id="fifth" data-magellan-target="fifth">
   <div class="grid-container">
   <div class="grid-x grid-margin-x">
@@ -130,15 +113,16 @@ connected vehicle start again.</p>
 </div>
 </div>
 </div>
-</div>
+
 
 
 <!-- Audio-->
 
-<audio controls id="1st-sound"><source src="assets/media/HeroStory1_Navigation.mp3" type="audio/mpeg" ></audio>
-<audio controls id="2nd-sound"><source src="assets/media/HeroStory2_Productivity.mp3" type="audio/mpeg" ></audio>
-<audio controls id="3rd-sound"><source src="assets/media/HeroStory3_Safety.mp3" type="audio/mpeg" ></audio>
-<audio controls id="4th-sound"><source src="assets/media/HeroStory4_Family.mp3" type="audio/mpeg" ></audio>
+<audio controls id="1st-sound"><source src="assets/media/1stindexsound.mp3" type="audio/mpeg" ></audio>
+<audio controls id="2nd-sound"><source src="assets/media/2ndindexsound.mp3" type="audio/mpeg" ></audio>
+<audio controls id="3rd-sound"><source src="assets/media/3rdindexsound.mp3" type="audio/mpeg" ></audio>
+<audio controls id="4th-sound"><source src="assets/media/4thindexsound.mp3" type="audio/mpeg" ></audio>
+
 
 
   <div id="waypointa"></div>

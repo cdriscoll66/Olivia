@@ -25,6 +25,7 @@ $(document).foundation();
 
 $('[data-toggle-menu]').on("click", function(){
   $("#overlay-nav-menu").toggleClass("is-open");
+  $('.hamburger-menu').toggleClass('animate');
 });
 
 
@@ -33,8 +34,10 @@ $(function() {
   $.scrollify({
     section : ".slide",
      interstitialSection : ".intersection",
-     //standardScrollElements: ".upperquad",
-     scrollSpeed: 2400,
+     easing: "swing",
+     scrollbars: false,
+    // standardScrollElements: "footer",
+     scrollSpeed: 1000,
   });
 });
 
@@ -65,15 +68,25 @@ $(window).scroll(function() {
 
 //play audio
 
+//Stop and reset audio on new waypoint
+function shutUp() {
+$('audio').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+});
+};
+
 var continuousElements = document.getElementsByClassName('sound')
 for (var i = 0; i < continuousElements.length; i++) {
   new Waypoint({
     element: continuousElements[i],
     handler: function(direction) {
-      if(direction == "down")
-      var snd = ('#' + this.element.id + "-sound");
-      $(snd).trigger('play');
+      if(direction == "down") {
+        shutUp();
+  var snd = '#' + this.element.id+ "-sound"
+  setTimeout(function(){ $(snd).trigger('play')}, 1000);
     }
+  }
   })
 }
 
@@ -100,9 +113,16 @@ $('.linespace').css('height', lnhite);
 
 
   $(document).ready(function(){
+
     $.scrollify.move(0);
     lnhgt();
-    $('audio').trigger('pause');
-      $("audio").prop('muted', true);
-      setTimeout(function(){ $("audio").prop('muted', false)}, 9000);
+    shutUp();
   });
+
+
+  //new dot nav work.
+
+  $('#one').on('click', function(event) {
+    event.preventDefault();
+    console.log('yay');
+  })
