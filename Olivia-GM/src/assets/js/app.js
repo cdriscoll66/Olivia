@@ -10,9 +10,10 @@ import Foundation from 'foundation-sites';
 
 
 import Scrollify from 'jquery-scrollify';
-
 import 'waypoints/lib/noframework.waypoints.min';
 import './lib/waypointslider';
+
+
 
 
 $(document).foundation();
@@ -76,15 +77,35 @@ $('audio').each(function(){
 });
 };
 
+
+var player;
+
+  $(document).ready(function(){
+
+    $.scrollify.move(0);
+    lnhgt();
+    	player = $('<audio/>', {
+    	  'id':'player',
+    	  'style':'display:none',
+    	  'html':'<source src="" type="audio/mpeg">'
+    	});
+    	player.appendTo('body');
+      player=player[0];
+      setAudioSource('null');
+
+
+  });
+
 var continuousElements = document.getElementsByClassName('sound')
 for (var i = 0; i < continuousElements.length; i++) {
   new Waypoint({
     element: continuousElements[i],
     handler: function(direction) {
       if(direction == "down") {
-        shutUp();
-  var snd = '#' + this.element.id+ "-sound"
-  setTimeout(function(){ $(snd).trigger('play')}, 1000);
+    var snd = this.element.id;
+
+
+  setTimeout(function(){ setAudioSource(snd) }, 1000);
     }
   }
   })
@@ -112,17 +133,22 @@ $('.linespace').css('height', lnhite);
 }
 
 
-  $(document).ready(function(){
+  function setAudioSource(trk) {
+  player.pause();
+	var url = "assets/media/" + trk + "sound.mp3";
+  $(player).find("source").attr("src",url);
+player.load();
+player.play();
 
-    $.scrollify.move(0);
-    lnhgt();
-    shutUp();
-  });
+}
 
 
   //new dot nav work.
 
-  $('#one').on('click', function(event) {
+/*  $('#one').on('click',
+  function(event) {
     event.preventDefault();
     console.log('yay');
+    $.scrollify.move(8);
   })
+*/
