@@ -45,13 +45,16 @@ audio {
 }
 
 .linespace {
-  //height:20vh;
   border-left: 1px solid $dark-gray;
   margin: 1rem 0 1rem 1.4rem;
+}
+.method .linespace {
+    visibility: hidden;
 }
 
 .sticky-container{
   display:none;
+  position: fixed;
 }
 .sticky{
   width:50px !important;
@@ -154,13 +157,19 @@ margin-left:10px;
   background-position:80% 20%;
 }
 
-.safeimg {
+.lftimg {
     position: absolute;
     top: 10%;
     left: 10%;
     z-index: 1;
 }
 
+.rghtimg {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 1;
+}
 
 //name at top of page
 

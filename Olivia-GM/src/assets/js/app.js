@@ -45,7 +45,7 @@ $(function() {
 //Display menu
 
 
-
+/*
 $(document).ready( function() {
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
@@ -66,13 +66,13 @@ $(window).scroll(function() {
 
 });
 });
-
+*/
 //play audio
 
 //Stop and reset audio on new waypoint
 function shutUp() {
 $('audio').each(function(){
-    this.pause(); // Stop playing
+  //  this.pause(); // Stop playing
     this.currentTime = 0; // Reset time
 });
 };
@@ -134,7 +134,7 @@ $('.linespace').css('height', lnhite);
 
 
   function setAudioSource(trk) {
-  player.pause();
+//  player.pause();
 	var url = "assets/media/" + trk + "sound.mp3";
   $(player).find("source").attr("src",url);
 player.load();
