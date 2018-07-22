@@ -43,3 +43,29 @@ i#mute-audio{
   background-repeat:no-repeat;
   background-position: 80% 20%;
 }
+
+.sf1 {
+  float:right;
+  margin-top:3rem;
+}
+
+@mixin fixback($position) {
+  background-repeat:no-repeat;
+  background-position: $position;
+  background-attachment: fixed;
+}
+
+#show1 {
+  background-image: url('../img/squares_group_4A.png');
+@include fixback(20% 10rem);
+}
+
+#show2 {
+  background-image: url('../img/squares_group_1B.png');
+  @include fixback(80% 50%);
+}
+
+#show3{
+  background-image: url('../img/starting-bg.png');
+  @include fixback(80% 50%);
+}

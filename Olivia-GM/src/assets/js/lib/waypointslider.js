@@ -27,3 +27,18 @@ var waypointb = new Waypoint({
           }
   }
 })
+
+var waypointb = new Waypoint({
+  element: document.getElementById('waypointc'),
+  handler: function(direction) {
+    if (direction == "up"){
+      $("#one").attr('href','#firstb'),
+      $("#two").attr('href','#secondb'),
+      $("#three").attr('href','#thirdb')   }
+    else {
+      $("#one").attr('href','#firstc'),
+      $("#two").attr('href','#secondc'),
+      $("#three").attr('href','#thirdc')
+          }
+  }
+})

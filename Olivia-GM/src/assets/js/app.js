@@ -105,7 +105,7 @@ for (var i = 0; i < continuousElements.length; i++) {
     var snd = this.element.id;
 
 
-  setTimeout(function(){ setAudioSource(snd) }, 1000);
+  setTimeout(function(){ setAudioSource(snd) }, 10);
     }
   }
   })
