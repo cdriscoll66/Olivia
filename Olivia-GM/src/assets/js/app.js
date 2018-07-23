@@ -36,8 +36,8 @@ $(function() {
     section : ".slide",
      interstitialSection : ".intersection",
      easing: "swing",
-     scrollbars: false,
-    // standardScrollElements: "footer",
+     //scrollbars: false,
+     standardScrollElements: ".intersection",
      scrollSpeed: 1000,
   });
 });
