@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
-
+import jqueryui from 'jquery-ui';
 window.$ = $;
 
 import Foundation from 'foundation-sites';
@@ -12,9 +12,8 @@ import Foundation from 'foundation-sites';
 import Scrollify from 'jquery-scrollify';
 import 'waypoints/lib/noframework.waypoints.min';
 import './lib/waypointslider';
-
-
-
+//import ScrollMagic from 'scrollmagic';
+//import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 $(document).foundation();
 
@@ -42,31 +41,6 @@ $(function() {
   });
 });
 
-//Display menu
-
-
-/*
-$(document).ready( function() {
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  var vpHeight = ($(".upperquad").height());
-  var presDis = $('.sticky-container').css("display");
-
-  if (scroll >= vpHeight) {
-    if (presDis == "none" ) {
-  $('.sticky-container').css("display", "block");
-}
-  }
-  else{
-    if (presDis == "block" ) {
-  $('.sticky-container').css("display", "none");
-}
-  }
-
-
-});
-});
-*/
 //play audio
 
 //Stop and reset audio on new waypoint
@@ -76,6 +50,7 @@ $('audio').each(function(){
     this.currentTime = 0; // Reset time
 });
 };
+
 
 
 var player;
@@ -91,7 +66,7 @@ var player;
     	});
     	player.appendTo('body');
       player=player[0];
-      setAudioSource('null');
+      //setAudioSource('null');
 
 
   });
@@ -139,16 +114,4 @@ $('.linespace').css('height', lnhite);
   $(player).find("source").attr("src",url);
 player.load();
 player.play();
-
 }
-
-
-  //new dot nav work.
-
-/*  $('#one').on('click',
-  function(event) {
-    event.preventDefault();
-    console.log('yay');
-    $.scrollify.move(8);
-  })
-*/
