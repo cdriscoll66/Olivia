@@ -55,43 +55,49 @@ i#mute-audio{
   background-attachment: fixed;
 }
 
-#show1 {
+.show1 {
   background-image: url('../img/squares_group_4A.png');
 @include fixback(20% 10rem);
 }
 
-#show2 {
+.show2 {
   background-image: url('../img/squares_group_1B.png');
   @include fixback(80% 50%);
 }
 
-#show3{
+.show3{
   background-image: url('../img/starting-bg.png');
   @include fixback(80% 50%);
 }
 
-#show4 {
+.show4 {
   background-image: url('../img/squares_group_4B.png');
 @include fixback(30% 12rem);
 }
 
-#show5 {
+.show5 {
   background-image: url('../img/squares_group_2B.png');
   @include fixback(80% 50%);
 }
 
-#show6 {
+.show6 {
   background-image: url('../img/squares_group_2A.png');
   @include fixback(90% 50%);
 }
 
-#show7 {
+.show7 {
   background-image: url('../img/squares_group_5B.png');
   @include fixback(70% 30%);
 }
-#show8 {
+.show8 {
   background-image: url('../img/squares_group_5A.png');
   @include fixback(90% 10%);
+}
+
+.show10 {
+  background-image: url('../img/method-squares.png');
+  @include fixback(20% 20%);
+  background-size: contain;
 }
 
 .famtop {

@@ -142,7 +142,7 @@ margin-left:10px;
   .bgnum {
     z-index: 0;
     font-family: $teko-font-family;
-    font-size: 49rem;
+    font-size: 40rem;
     font-weight:300;
     color: #002440;
     position: absolute;
@@ -159,13 +159,33 @@ margin-left:10px;
   background-image: url('../img/1_HERO.png');
   background-repeat:no-repeat;
   background-position:80% 20%;
+  @include breakpoint(large down){
+    h2 {
+      background-color:rgba(255,255,255,0.8);
+    }
+  }
 }
 
 .lftimg {
     position: absolute;
     top: 10%;
     left: 10%;
+    margin-left:-8rem;
     z-index: 1;
+    @include breakpoint (xlarge down){
+      width:80%;
+      top:0;
+      left:0;
+      margin-top:-4rem;
+    }
+    @include breakpoint (medium down){
+    z-index:-1;
+}
+    @include breakpoint (small down){
+      width:100%;
+      margin-top:0;
+      margin-left:0;
+    }
 }
 
 .rghtimg {
@@ -210,3 +230,26 @@ html {
     background: transparent; /* make scrollbar transparent
 }
 */
+
+.methodhero {
+  background-color:$secondary-color;
+  color:$white;
+  .grid-container{
+    padding-top:30vh !important;
+  }
+  h1 {
+    font-family:$teko-font-family;
+    font-size:1.6rem;
+  }
+  h2 {
+    font-family:$header-font-family;
+    text-transform:none;
+  }
+}
+
+.cont{
+    @include breakpoint(small){
+      background-color:rgba(255,255,255,0.8);
+      padding:20px;
+    }
+}

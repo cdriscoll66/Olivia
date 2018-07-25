@@ -6,13 +6,46 @@
   }
   .grid-container {
     padding-top:40vh;
+    padding-right:3rem;
+    padding-left:3rem;
   }
   h3 {
     font-family: $teko-font-family;
     text-transform:uppercase;
   }
 }
+.light{
+    background-color:$white;
+    color:$secondary-color;
+    h2{
+      color:$secondary-color;
+    }
+    p {
+      color:$secondary-color;
+    }
+}
+
 .dark{
     background-color:$secondary-color;
     color:$white;
+    h2{
+      color:$white;
+    }
+    p {
+      color:$white;
+    }
+}
+
+
+// scroll Movement controllers
+
+.pin {
+  position: fixed;
+  opacity:.2;
+  left:35vh;
+}
+
+
+.pt2, .pt3, .pt2a, .pt3a, .pt2b, .pt3b  {
+    padding-top:150px;
 }

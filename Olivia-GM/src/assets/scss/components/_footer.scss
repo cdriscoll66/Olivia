@@ -3,12 +3,16 @@
 //footer stylesheet
 
 .footer {
+  position:relative;
+  z-index:10;
   background-color:$primary-color;
   color:$white;
   height:800px;
   .grid-container {
       max-width: 85rem;
-      padding: 150px 0;
+      padding: 150px 50px;
+      background-color:$primary-color;
+
   }
   p {
     font-size:50px;
@@ -48,9 +52,11 @@
   }
   .holder {
     position:relative;
+    padding-bottom:50px;
     .bott {
       position:absolute;
       bottom:0;
+
     }
   }
 
