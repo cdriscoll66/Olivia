@@ -1,13 +1,18 @@
 
 .slide {
   height:886px;
-  h2 {
-    font-size:2.75rem;
-  }
   .grid-container {
     padding-top:40vh;
     padding-right:3rem;
     padding-left:3rem;
+  @include breakpoint(large down){
+    padding-top:20vh;
+  }
+  @include breakpoint(small down){
+    padding-right:.625rem;
+    padding-left:.625rem;
+  }
+
   }
   h3 {
     font-family: $teko-font-family;
@@ -19,9 +24,16 @@
     color:$secondary-color;
     h2{
       color:$secondary-color;
+      font-size:2.2rem;
+      @include breakpoint(small down){
+        font-size:1.8rem;
+      }
     }
     p {
       color:$secondary-color;
+      @include breakpoint(small down){
+        font-size:0.8rem;
+      }
     }
 }
 
@@ -30,9 +42,16 @@
     color:$white;
     h2{
       color:$white;
+      font-size:2.2rem;
+          @include breakpoint(small down){
+            font-size:1.8rem;
+          }
     }
     p {
       color:$white;
+      @include breakpoint(small down){
+        font-size:0.8rem;
+      }
     }
 }
 
@@ -43,9 +62,35 @@
   position: fixed;
   opacity:.2;
   left:35vh;
+  @include breakpoint(xlarge down){
+    left:10vh;
+  }
+  @include breakpoint(large down){
+    left:5vh;
+  }
+  @include breakpoint(small down){
+    left:0;
+  }
+  .grid-container {
+    @include breakpoint(xlarge down){
+      padding-top:20vh;
+    }
+    @include breakpoint(large down){
+      padding-top:10vh;
+    }
+  }
 }
 
 
 .pt2, .pt3, .pt2a, .pt3a, .pt2b, .pt3b  {
-    padding-top:150px;
+    padding-top:160px;
+    h2 {
+      font-size: 1.6rem;
+    }
+}
+
+.pt3, .pt3a, .pt3b{
+  @include breakpoint(medium down){
+    margin-top:160px;
+  }
 }

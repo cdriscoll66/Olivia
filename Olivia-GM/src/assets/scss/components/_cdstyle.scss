@@ -90,11 +90,29 @@ margin-left:10px;
     font-size:3rem;
     display:inline;
     line-height: 5rem;
+    @include breakpoint(medium down){
+    font-size:1.8rem;
+    line-height:3rem;
   }
+}
   .grid-container {
     padding-top:30vh;
   }
 }
+
+.quoteby {
+    color: $white;
+    font-family: $teko-font-family;
+    font-size: 1.8rem;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 5vh;
+    display: block;
+    width: 100%;
+    @include breakpoint(medium down){
+      font-size:1.2rem;
+}
+  }
 
 
 
@@ -210,16 +228,7 @@ li.tag {
     width:200px;
 }
 
-.quoteby {
-    color: $white;
-    font-family: $teko-font-family;
-    font-size: 1.8rem;
-    bottom: 0;
-    position: absolute;
-    margin-bottom: 5vh;
-    display: block;
-    width: 100%;
-  }
+
 /*
 //hide scroll bar but still scrollable
 html {

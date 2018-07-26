@@ -8,6 +8,10 @@
   background-color:$primary-color;
   color:$white;
   height:800px;
+    @include breakpoint(large down){
+height:auto;
+    }
+
   .grid-container {
       max-width: 85rem;
       padding: 150px 50px;
